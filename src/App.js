@@ -6,7 +6,6 @@ import UsersPage from "./pages/UsersPage/UsersPage";
 import PostsPage from "./pages/PostsPage/PostsPage";
 
 import store from './store'
-
 import './App.css';
 import SinglePostPage from "./pages/SinglePostPage/SinglePostPage";
 

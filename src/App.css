@@ -1,10 +1,10 @@
 .container {
-    width: 70% ;
+    width: 70%;
     margin: 0 auto;
     position: relative;
 }
 
-.positionAbs{
+.positionAbs {
     position: absolute;
     right: 50px;
     top: 50px;
