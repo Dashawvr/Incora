@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import {Provider} from "react-redux";
+
+import UsersPage from "./pages/UsersPage/UsersPage";
+import PostsPage from "./pages/PostsPage/PostsPage";
+
+import store from './store'
+
 import './App.css';
+import SinglePostPage from "./pages/SinglePostPage/SinglePostPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <UsersPage />
+          </Route>
+          <Route path="/:id/posts" exact>
+            <PostsPage />
+          </Route>
+          <Route path="/:id/posts/:id" exact>
+            <SinglePostPage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </Provider>
+
   );
 }
 

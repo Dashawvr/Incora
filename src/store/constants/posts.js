@@ -1,0 +1,6 @@
+export const POSTS_REQUEST = 'POSTS_REQUEST'
+export const POST_REQUEST = 'POST_REQUEST'
+export const POST_CREATE = 'POST_CREATE'
+export const POSTS_SUCCESS = 'POSTS_SUCCESS'
+export const POST_UPDATE = 'POST_UPDATE'
+export const POST_DELETE = 'POST_DELETE'
